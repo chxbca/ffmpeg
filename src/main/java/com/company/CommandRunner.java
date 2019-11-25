@@ -1,6 +1,8 @@
 package com.company;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,6 +17,10 @@ import java.util.concurrent.TimeUnit;
  * @author chxbca
  */
 public class CommandRunner {
+
+
+    private static Logger logger = LoggerFactory.getLogger(CommandRunner.class);
+
 
     public CommandRunner() {
         this(2);
@@ -56,7 +62,7 @@ public class CommandRunner {
                          new BufferedReader(new InputStreamReader(inputStream))) {
                 String line;
                 while ((line = bufferedReader.readLine()) != null) {
-                    System.out.println(line);
+                    logger.info(line);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
