@@ -56,7 +56,7 @@ public class Ffmpeg {
         LIBXVID("libxvid"),
 
         /**
-         * hevo
+         * libx265
          */
         H265("libx265"),
 
